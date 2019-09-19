@@ -3,15 +3,16 @@ package io.intern.rms.web;
 import io.intern.rms.domain.Tag;
 import io.intern.rms.services.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 public class TagController {
     @Autowired
     private TagService tagService;
 
-    @GetMapping("{/tagName}")
-    public Iterable<Tag> getAllTags(@PathVariable String tagName){
-        return tagService.findAllTag(tagName);
+    @PostMapping("/test")
+    public Iterable<Tag> createTagList(@RequestBody Tag tag){
+        return tagService.findAllTag(tag.getTagName());
     }
 }
