@@ -12,7 +12,6 @@ public class Tag {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Tag name is required")
     private String tagName;
 
     @JsonFormat(pattern = "yyyy-mm-dd")
