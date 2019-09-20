@@ -12,8 +12,8 @@ public class TagService {
     @Autowired
     private TagRepository tagRepository;
 
-    public Iterable<Tag> findAllTag(String tagName){
-        return tagRepository.findAllByTagName(tagName);
+    public Iterable<Tag> findListByTagName(String tagName){
+        return tagRepository.findListByTagName(tagName);
     }
 
     @PostConstruct
