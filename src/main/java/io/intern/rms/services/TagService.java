@@ -18,16 +18,14 @@ public class TagService {
 
     @PostConstruct
     public void init() {
-        Tag d1 = new Tag();
-        d1.setTagName("Java");
+
+        Tag d1 = new Tag("Java");
         tagRepository.save(d1);
 
-        Tag d2 = new Tag();
-        d2.setTagName("Python");
+        Tag d2 = new Tag("Python");
         tagRepository.save(d2);
 
-        Tag d3 = new Tag();
-        d3.setTagName("Ruby");
+        Tag d3 = new Tag("Go");
         tagRepository.save(d3);
     }
 

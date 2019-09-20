@@ -20,6 +20,10 @@ public class Tag {
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date updated_at;
 
+    public Tag(String tagName) {
+        this.tagName = tagName;
+    }
+
     public Tag(){
 
     }
