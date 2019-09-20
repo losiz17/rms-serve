@@ -15,7 +15,7 @@ public class TagController {
     private TagService tagService;
 
     @PostMapping("/search")
-    public Iterable<Tag> createTagList(@RequestBody Tag tag){
+    public Iterable<Tag> findTagByName(@RequestBody Tag tag){
         return tagService.findAllTag(tag.getTagName());
     }
 }
