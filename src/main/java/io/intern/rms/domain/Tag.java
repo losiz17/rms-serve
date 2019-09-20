@@ -6,6 +6,13 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
+
+/**
+* Tagの情報を登録する。
+*
+* @param tagName タグの名前
+**/
+
 @Entity
 public class Tag {
     @Id
